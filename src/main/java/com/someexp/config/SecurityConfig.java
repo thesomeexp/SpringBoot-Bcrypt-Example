@@ -39,9 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 authorizeRequests.antMatchers(permission.getUrl()).hasAnyAuthority(permission.getPermtag())
             );
         }
-        authorizeRequests.antMatchers("/login").permitAll()
+        authorizeRequests.antMatchers("/login.html").permitAll()
                 .antMatchers("/**").fullyAuthenticated()
-                .and().formLogin().loginPage("/login")
+                .and().formLogin().loginPage("/login.html")
                 .and().csrf().disable();
 
     }
