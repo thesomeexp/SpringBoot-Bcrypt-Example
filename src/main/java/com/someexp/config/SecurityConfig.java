@@ -40,8 +40,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             );
         }
         authorizeRequests.antMatchers("/login.html").permitAll()
+                .antMatchers("/register.html").permitAll()
+                .antMatchers("/register").permitAll()
                 .antMatchers("/**").fullyAuthenticated()
                 .and().formLogin().loginPage("/login.html")
+                .and().logout()
                 .and().csrf().disable();
 
     }

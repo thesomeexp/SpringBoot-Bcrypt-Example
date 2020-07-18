@@ -2,14 +2,14 @@ server:
   port: 8080
 spring:
   application:
-    name: sellergoods-service
+    name: SpringBoot-Bcrypt-Example
   resources:
     static-locations: classpath:/static
   mvc:
     view:
       suffix: .html
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.52.67:3306/BcryptExample?characterEncoding=utf8&useSSL=false&useUnicode=true
     username: root
     password: 123456

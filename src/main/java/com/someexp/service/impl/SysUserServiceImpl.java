@@ -45,9 +45,8 @@ public class SysUserServiceImpl implements SysUserService, UserDetailsService {
         return sysUserDao.insert(user);
     }
 
-    // TODO: is user Exist?
     private boolean usernameExist(String username) {
-        return false;
+        return sysUserDao.findUserByUsername(username) == null ? false : true;
     }
 
     @Override
